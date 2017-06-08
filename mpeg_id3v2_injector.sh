@@ -37,16 +37,16 @@ OPTIONS :
 
         Examples : 
         #To insert title with an existing ID3 file
-        $0 -s ciscoad.ts \
-           -i ciscoad.id3:0 \
+        $0 -s test.ts \
+           -i test.id3:0 \
 
         #To insert several titles with an existing ID3 files
-        $0 -s ciscoad.ts \
-           -i ciscoad.id3:0,ciscoad2.id3:10 \
+        $0 -s test.ts \
+           -i test.id3:0,test2.id3:10 \
 
         #To insert several title without an ID3 file.
-        $0 -s ciscoad.ts \
-           -p cisco.com \
+        $0 -s test.ts \
+           -p test.com \
            -a ad0
            -t 0
 

@@ -12,8 +12,8 @@ sub print_help{
 
    print "Create an ID3v2 file with TXXX and/or TIT2 tags. \n";
    print "Usage : $prog_name [-h] -o <output> -p <providerId> -a <assetId> <-txxx|-title> \n";
-   print "$prog_name -o ciscoad.id3 -p cisco.com -a ad0 -title \n";
-   print "$prog_name -o ciscoad.id3 -p cisco.com -a ad0 -txxx \n";
+   print "$prog_name -o test.id3 -p test.com -a ad0 -title \n";
+   print "$prog_name -o test.id3 -p test.com -a ad0 -txxx \n";
 
    exit $exit_status;
 }

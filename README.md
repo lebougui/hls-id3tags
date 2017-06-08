@@ -28,11 +28,11 @@ OPTIONS :
 
         Examples : 
         #To insert title with an existing ID3 file
-        ./mpeg_id3v2_injector.sh -s ciscoad.ts            -i ciscoad.id3:0 
+        ./mpeg_id3v2_injector.sh -s test.ts            -i test.id3:0 
         #To insert several titles with an existing ID3 files
-        ./mpeg_id3v2_injector.sh -s ciscoad.ts            -i ciscoad.id3:0,ciscoad2.id3:10 
+        ./mpeg_id3v2_injector.sh -s test.ts            -i test.id3:0,test2.id3:10 
         #To insert several title without an ID3 file.
-        ./mpeg_id3v2_injector.sh -s ciscoad.ts            -p cisco.com            -a ad0
+        ./mpeg_id3v2_injector.sh -s test.ts            -p test.com            -a ad0
            -t 0
 
 Version       : ./mpeg_id3v2_injector.sh 1.0 (2016/06/10) 
@@ -40,14 +40,14 @@ Maintainer(s) : Lebougui
 
 ```
 
-Given a transportream fileSequence0.ts to add TXXX ID3v2 tag with string "cisco.com/ad0" use this command :
+Given a transportream fileSequence0.ts to add TXXX ID3v2 tag with string "test.com/ad0" use this command :
 
 ```
 
-# ./mpeg_id3v2_injector.sh -p cisco.com -a ad0 -t 0 -s fileSequence0.ts -d  
+# ./mpeg_id3v2_injector.sh -p test.com -a ad0 -t 0 -s fileSequence0.ts -d  
 00000000  49 44 33 03 00 40 00 00  00 24 00 00 00 06 00 01  |ID3..@...$......|
 00000010  00 00 00 00 54 58 58 58  00 00 00 0f 00 00 00 00  |....TXXX........|
-00000020  63 69 73 63 6f 2e 63 6f  6d 2f 61 64 30 00        |cisco.com/ad0.|
+00000020  74 65 73 74 2e 63 6f 6d  2f 61 64 30 00 00 00 00  |test.com/ad0.|
 0000002e
 ** Imported 1 metadata tags
 Inserting ID3 frame after frame 5 (len=188)
@@ -64,7 +64,7 @@ To insert ID3v2 tags in several transport streams :
 
 ```
 
-for entry in `find /home/nginx/html/cdn/ciscoad -name "*.ts"`; do ./mpeg_id3v2_injector.sh -s $entry -p cisco.com -a ad0 -t 0 ; done
+for entry in `find /home/nginx/html/cdn/testad -name "*.ts"`; do ./mpeg_id3v2_injector.sh -s $entry -p test.com -a ad0 -t 0 ; done
 
 ```
 
